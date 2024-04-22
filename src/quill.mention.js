@@ -8,7 +8,7 @@ import {
 	setInnerContent
 } from './utils';
 import './quill.mention.css';
-import './blots/mention';
+import { MentionBlot } from './blots/mention';
 
 class Mention {
 	constructor(quill, options) {
@@ -814,6 +814,4 @@ class Mention {
 	}
 }
 
-Quill.register('modules/mention', Mention);
-
-export default Mention;
+export { Mention, MentionBlot}

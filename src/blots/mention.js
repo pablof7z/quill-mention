@@ -96,4 +96,4 @@ MentionBlot.blotName = "mention";
 MentionBlot.tagName = "span";
 MentionBlot.className = "mention";
 
-Quill.register("blots/mention", MentionBlot);
+export { MentionBlot };

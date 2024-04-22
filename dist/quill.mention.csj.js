@@ -1,5 +1,7 @@
 'use strict';
 
+Object.defineProperty(exports, '__esModule', { value: true });
+
 var Quill = require('quill');
 
 function _interopDefaultLegacy (e) { return e && typeof e === 'object' && 'default' in e ? e : { 'default': e }; }
@@ -363,7 +365,6 @@ var MentionBlot = /*#__PURE__*/function (_Embed) {
 MentionBlot.blotName = "mention";
 MentionBlot.tagName = "span";
 MentionBlot.className = "mention";
-Quill__default["default"].register("blots/mention", MentionBlot);
 
 var Mention = /*#__PURE__*/function () {
   function Mention(quill, options) {
@@ -1006,6 +1007,6 @@ var Mention = /*#__PURE__*/function () {
   }]);
   return Mention;
 }();
-Quill__default["default"].register('modules/mention', Mention);
 
-module.exports = Mention;
+exports.Mention = Mention;
+exports.MentionBlot = MentionBlot;

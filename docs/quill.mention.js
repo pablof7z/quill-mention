@@ -1,4 +1,4 @@
-var quillMention = (function (Quill) {
+var quillMention = (function (exports, Quill) {
   'use strict';
 
   function _interopDefaultLegacy (e) { return e && typeof e === 'object' && 'default' in e ? e : { 'default': e }; }
@@ -362,7 +362,6 @@ var quillMention = (function (Quill) {
   MentionBlot.blotName = "mention";
   MentionBlot.tagName = "span";
   MentionBlot.className = "mention";
-  Quill__default["default"].register("blots/mention", MentionBlot);
 
   var Mention = /*#__PURE__*/function () {
     function Mention(quill, options) {
@@ -1005,8 +1004,12 @@ var quillMention = (function (Quill) {
     }]);
     return Mention;
   }();
-  Quill__default["default"].register('modules/mention', Mention);
 
-  return Mention;
+  exports.Mention = Mention;
+  exports.MentionBlot = MentionBlot;
 
-})(Quill);
+  Object.defineProperty(exports, '__esModule', { value: true });
+
+  return exports;
+
+})({}, Quill);
